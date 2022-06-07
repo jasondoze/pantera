@@ -113,7 +113,7 @@ git commit -m 'adding readme and test'
 
 git remote -v
 
-git remote add origin https://github.com/Jason-Doze/pantera.git
+git remote add origin /Users/jasondoze13/pantera/computerDiagram.png
 
 git remote -v
 
