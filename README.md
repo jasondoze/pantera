@@ -129,8 +129,12 @@ history
 
 env
 
-<!-- display the computer diagram png -->
-<img src=""computerDiagram.png"" alt="computer diagram" width="400">
+
+
+
+![image info](images/computerDiagram.png)
+
+
 
 6.6.2022
 strings are arrays of characters
