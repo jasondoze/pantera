@@ -131,7 +131,9 @@ env
 
 
 
+
 ![image info](images/computerDiagram.png)
+
 
 
 6.6.2022
