@@ -130,7 +130,7 @@ history
 env
 
 <!-- display the computer diagram png -->
-<img src="/Users/jasondoze13/pantera/computerDiagram.png" alt="computer diagram" width="400">
+<img src=""computerDiagram.png"" alt="computer diagram" width="400">
 
 6.6.2022
 strings are arrays of characters
