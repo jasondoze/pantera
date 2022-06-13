@@ -2,7 +2,7 @@
 let hello = 'Hello my name is ';
 let helloTwo = 'Hello my name is';
 let fullName = 'Phillip Anselmo,';
-
+let bandName = 'Pantera'
 // print a string that has special characters, one that is interpreted(escaped special characters) and one that is not
 
 // make a new variable called easyLyrics that print correctly with escape characters and new line characters
@@ -19,5 +19,5 @@ your trust is in whiskey and weed and Black Sabbath
 Don't waste your time, embrace it
 And then you'll know yourself`;
 
-console.log(hello + fullName + " and here's my song:\n " + escapeLyrics);
+console.log(hello + fullName + " from the band" + bandName + " and here's my song:\n " + escapeLyrics);
 console.log(`${helloTwo} ${fullName} and here's my song: \n ${lyrics}`);
