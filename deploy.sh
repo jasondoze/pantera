@@ -1,6 +1,7 @@
 # strings.js deployment
 #!/bin/bash
 
-sudo apt install -y node
+sudo apt update
+sudo apt install -y nodejs
 node --version
 node strings.js 
