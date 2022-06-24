@@ -1,0 +1,1047 @@
+    1  nano hello.ts
+    2  tsc --help
+    3  npx tsc --help
+    4  which tsc
+    5  which npx
+    6  npm install -g typescript
+    7  sudo npm install -g typescript
+    8  which tsc
+    9  tsc hello.ts
+   10  ls
+   11  node hello.js
+   12  npm build
+   13  npm run build
+   14  node build/index.js
+   15  ls
+   16  cd build
+   17  ls
+   18  cd src
+   19  ls
+   20  ls
+   21  node index.js
+   22  pwd
+   23  ls
+   24  cd
+   25  ls
+   26  cd TSCON
+   27  ls
+   28  cd udacity_
+   29  ls
+   30  cd typescriptDev
+   31  ls
+   32  cd build
+   33  ls
+   34  git rev-parse --short
+   35  git rev-parse --short HEAD
+   36  git status
+   37  git log
+   38  git rev-parse --short HEAD
+   39  git status
+   40  tar -cf d145126.tar src
+   41  ls
+   42  cd ..
+   43  ls
+   44  mkdir deploy
+   45  ls
+   46  cd deploy
+   47  ls
+   48  touch deploy.sh
+   49  ls
+   50  cd 
+   51  ls
+   52  cd TSCON
+   53  ls
+   54  cd udacity_
+   55  ls
+   56  cd typescriptDev
+   57  ls
+   58  cd deploy
+   59  ls
+   60  bash deploy.sh
+   61  mkdir production
+   62  ls
+   63  mv deploy.sh production
+   64  ls
+   65  ls production
+   66  mkdir local_dev
+   67  touch local_dev/deploy.sh
+   68  ls
+   69  brew --version
+   70  brew --version
+   71  brew install node
+   72  clear
+   73  git status
+   74  git add ../build/d145126.tar ../build/hello.js ../build/src 
+   75  git status
+   76  git add ./local_dev ./production ./ ../hello.ts ../hello.js ../.gitignore
+   77  git status
+   78  git commit -m 'add deploy to local dev and production to typscript dev'
+   79  git checkout -b juneSixTeen
+   80  git checkout -b juniSixteen
+   81  git status
+   82  git push
+   83  git push --set-upstream origin juniSixteen
+   84  clear
+   85  ls
+   86  clear
+   87  ssh-keygen
+   88  ssh-keygen -t ed25519 -C 'jdoze@protonmail.com'
+   89  ssh-keygen -t ed25519 -C 'jdoze@protonmail.com'
+   90  ssh-keygen -t ed25519 -C 'jdoze@protonmail.com'
+   91  ls
+   92  cat id_ed25519.pub
+   93  clear
+   94  git checkout -b doze/rsa
+   95  git status
+   96  git add id_ed25519 id_ed25519.pub images/RSA_encryption.png images/continuousIntegration.jpg images/softwareDevelopmentLifecycle.jpeg images/userStoryMap.webp .gitignore README.md deploy.sh
+   97  git commit -m 'add homework and images'
+   98  git push
+   99  git push --set-upstream origin doze/rsa
+  100  clear
+  101  git status
+  102  git add README.md images/Software_Dev_Pipeline_2.png
+  103  git commit -m 'add photo to pantera'
+  104  git push
+  105  clear
+  106  node oneVowel.js
+  107  ls
+  108  cd countries
+  109  ls
+  110  clear
+  111  node oneVowel.js
+  112  node oneVowel.js
+  113  node oneVowel.js
+  114  node oneVowel.js
+  115  git clone https://github.com/Jason-Doze/udacity_js_intermediate.git
+  116  git status
+  117  git add README.md
+  118  git status
+  119  git commit -m 'first commit'
+  120  git branch -M main
+  121  git branch
+  122  git push
+  123  git push --set-upstream origin main
+  124  git status
+  125  git pull
+  126  node modifyProperties.js
+  127  node modifyProperties.js
+  128  node modifyProperties.js
+  129  node modifyProperties.js
+  130  node modifyProperties.js
+  131  node modifyProperties.js
+  132  node modifyProperties.js
+  133  node modifyProperties.js
+  134  node modifyProperties.js
+  135  node modifyProperties.js
+  136  node modifyProperties.js
+  137  node modifyProperties.js
+  138  node modifyProperties.js
+  139  clear
+  140  clear
+  141  clear
+  142  node modifyProperties.js
+  143  node modifyProperties.js
+  144  clear
+  145  clear
+  146  node modifyProperties.js
+  147  node modifyProperties.js
+  148  node modifyProperties.js
+  149  node modifyProperties.js
+  150  node modifyProperties.js
+  151  node modifyProperties.js
+  152  node modifyProperties.js
+  153  node modifyProperties.js
+  154  node modifyProperties.js
+  155  node modifyProperties.js
+  156  git status
+  157  ls
+  158  cd ..
+  159  ls
+  160  git status
+  161  ls
+  162  cd udacity_js_intermediate
+  163  ls
+  164  git status
+  165  git status
+  166  ls
+  167  cd ..
+  168  ls
+  169  git status
+  170  node splitExploration.js
+  171  node splitExploration.js
+  172  node splitExploration.js
+  173  node splitExploration.js
+  174  node splitExploration.js
+  175  node shortestCountry.js
+  176  node shortestCountry.js
+  177  node shortestCountry.js
+  178  clear
+  179  node shortestCountry.js
+  180  node unitedName.js
+  181  node unitedName.js
+  182  node unitedName.js
+  183  node unitedName.js
+  184  node unitedName.js
+  185  node unitedName.js
+  186  node unitedName.js
+  187  node splitExploration.js
+  188  git status
+  189  git add oneVowel.js unitedName.js splitExploration.js
+  190  git commit -m 'add challenges'
+  191  git push
+  192  touch README.md
+  193  ls
+  194  cd ..
+  195  ls
+  196  touch README.md
+  197  system "npm", "install", *Language::Node.std_npm_install_args(libexec)
+  198  ls
+  199  cd Applications
+  200  ls
+  201  cd /
+  202  ls
+  203  cd Applications
+  204  ls
+  205  cd
+  206  ls
+  207  cd
+  208  cd /
+  209  ls
+  210  cd Users
+  211  ls
+  212  cd jasondoze13
+  213  ls
+  214  cd
+  215  brew
+  216  ls
+  217  cd
+  218  brew install node npm
+  219  node -version
+  220  node --version
+  221  npm --version
+  222  brew install nodejs
+  223  ls
+  224  cd pantera
+  225  ls
+  226  code .
+  227  clear
+  228  const mileTimes = [7.50, 6.25, 10.60, 8.88];
+  229  cd
+  230  ls
+  231  const mileTimes = [7.50, 6.25, 10.60, 8.88];
+  232  cd
+  233  ls
+  234  echo "# udacity_js_intermediate" >> README.md
+  235  ls
+  236  echo "# udacity_js_intermediate" >> README.md
+  237  git init
+  238  git add README.md
+  239  git branch -M main
+  240  git remote add origin https://github.com/Jason-Doze/udacity_js_intermediate.git
+  241  git push -u origin main
+  242  clear
+  243  ls
+  244  cd README.md
+  245  mkdir udacityObjects
+  246  ls
+  247  README.md mv udacityObjects
+  248  mv README.md udacityObjects
+  249  ls
+  250  cd udacityObjects
+  251  ls
+  252  code .
+  253  clear
+  254  cd ..
+  255  ls
+  256  mv udacityObjects udacity_js_intermediate
+  257  ls
+  258  cd udacity_js_intermediate
+  259  ls
+  260  cd udacityObjects
+  261  code .
+  262  ls
+  263  cd
+  264  ls
+  265  cd /
+  266  ls
+  267  cd Volumes
+  268  ls
+  269  cd My\ Passport\ for\ Mac\ -\ Data
+  270  ls
+  271  cd UnderDog_Devs
+  272  ls
+  273  cd UnderdogDevs
+  274  ls
+  275  code .
+  276  clear
+  277  cd
+  278  ls
+  279  cd TSCON
+  280  ls
+  281  cd udacity_
+  282  ls
+  283  cd
+  284  ls
+  285  cd udacity_js_intermediate
+  286  ls
+  287  cd udacityObjects
+  288  ls
+  289  code .
+  290  cd 
+  291  clear
+  292  command -flags arg1 arg2
+  293  foo
+  294  whoami
+  295  hostname
+  296  whoami
+  297  hostname
+  298  man whoami
+  299  man id
+  300  id -r
+  301  man whoami
+  302  id -un
+  303  pwd
+  304  pwd
+  305  man ls
+  306  ls
+  307  ls -la
+  308  pwd
+  309  ls
+  310  pwd
+  311  man cd
+  312  cd Applications
+  313  pwd
+  314  ls
+  315  ls -la
+  316  pwd
+  317  cd .
+  318  pwd
+  319  cd ..
+  320  pwd
+  321  cd ..
+  322  ls
+  323  pwd
+  324  cd ..
+  325  pwd
+  326  ls
+  327  cd /
+  328  pwd
+  329  cd ..
+  330  pwd
+  331  cd /Users/jasondoze13/Applications
+  332  pwd
+  333  pwd
+  334  cd /Users
+  335  pwd
+  336  cd .
+  337  ls
+  338  cd ./jasondoze13/Applications
+  339  ls
+  340  pwd
+  341  cd
+  342  pwd
+  343  ls
+  344  man mkdir
+  345  clear
+  346  mkdir shell-class
+  347  ls
+  348  cd shell-class
+  349  ls
+  350  pwd
+  351  ls
+  352  ls -la
+  353  man nano
+  354  pwd
+  355  ls
+  356  nano hello.txt
+  357  ls
+  358  man cat
+  359  cat hello.txt
+  360  man echo
+  361  echo "foo bar"
+  362  echo "ls"
+  363  ls
+  364  nano hello.txt
+  365  ls -la
+  366  cat hello.txt
+  367  pwd
+  368  ls hello.txt
+  369  ls -la hello.txt
+  370  ls
+  371  pwd
+  372  cd .
+  373  pwd
+  374  which ls
+  375  ls /bin
+  376  cat /bin/cat
+  377  ls /
+  378  ls
+  379  which ls
+  380  /bin/ls
+  381  /bin/pwd
+  382  ls
+  383  /bin/ls
+  384  echo $PATH
+  385  foo
+  386  ls /usr/local/bin
+  387  which git
+  388  which code
+  389  man touch
+  390  clear
+  391  cd
+  392  ls
+  393  cd TSCON
+  394  ls
+  395  cd udacity_
+  396  ls
+  397  code .
+  398  ls
+  399  cd 
+  400  ls
+  401  cd /
+  402  ls
+  403  cd Volumes
+  404  ls
+  405  cd My\ Passport\ for\ Mac\ -\ Data
+  406  ls
+  407  cd UnderDog_Devs
+  408  ls
+  409  cd UnderdogDevs
+  410  ls
+  411  code .
+  412  cd
+  413  node --version
+  414  git --version
+  415  curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
+  416  curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | /bin/bash
+  417  sudo true
+  418  curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | /bin/bash
+  419  brew --version
+  420  which brew
+  421  brew install node
+  422  brew install nodejs
+  423  brew install git
+  424  brew update
+  425  brew doctor
+  426    rm -rf "/usr/local/Homebrew/Library/Taps/homebrew/homebrew-core"\n  brew tap homebrew/core
+  427  brew install git vagrant virtualbox
+  428  brew install git vagrant virtualbox
+  429  clear
+  430  ls
+  431  cd pantera
+  432  ls
+  433  code .
+  434  clear
+  435  ls
+  436  cd pantera
+  437  ls
+  438  git status
+  439  git checkout main
+  440  git pull origin main
+  441  git checkout -b doze/vagrant
+  442  vagrant --version
+  443  vagrant init
+  444  ls
+  445  nano Vagrantfile
+  446  vagrant up
+  447  vagrant ssh
+  448  vagrant destroy
+  449  clear
+  450  ls
+  451  cd /
+  452  ls
+  453  cd Volumes
+  454  ls
+  455  cd My\ Passport\ for\ Mac\ -\ Data
+  456  ls
+  457  cd UnderDog_Devs
+  458  ls
+  459  cd UnderdogDevs
+  460  ls
+  461  code .
+  462  ls
+  463  cd countries
+  464  ls
+  465  node 
+  466  node nameWithinName.js
+  467  node nameWithinName.js
+  468  node nameWithinName.js
+  469  node nameWithinName.js
+  470  node nameWithinName.js
+  471  node nameWithinName.js
+  472  node nameWithinName.js
+  473  node nameWithinName.js
+  474  node nameWithinName.js
+  475  node nameWithinName.js
+  476  node nameWithinName.js
+  477  clear
+  478  node nameWithinName.js
+  479  node nameWithinName.js
+  480  node nameWithinName.js
+  481  clear
+  482  cd
+  483  ls
+  484  cd Downloads
+  485  ls
+  486  mv baby_names_2020_short.txt Desktop
+  487  ls
+  488  cd Desktop
+  489  mv Desktop baby_names_2020_short.txt
+  490  ls
+  491  ls
+  492  cd
+  493  ls
+  494  cd /
+  495  ls
+  496  cd V
+  497  cd Volumes
+  498  ls
+  499  cd My\ Passport\ for\ Mac\ -\ Data
+  500  ls
+  501  cd UnderDog_Devs
+  502  ls
+  503  cd UnderdogDevs
+  504  ls
+  505  node babyNames
+  506  node shortestName.js
+  507  ls
+  508  cd babyNames
+  509  ls
+  510  node shortestName.js
+  511  node shortestName.js
+  512  node shortestName.js
+  513  node shortestName.js
+  514  node shortestName.js
+  515  node shortestName.js
+  516  node shortestName.js
+  517  node shortestName.js
+  518  node shortestName.js
+  519  node shortestName.js
+  520  node shortestName.js
+  521  node shortestName.js
+  522  node shortestName.js
+  523  node shortestName.js
+  524  node shortestName.js
+  525  node shortestName.js
+  526  node shortestName.js
+  527  node shortestName.js
+  528  node shortestName.js
+  529  node shortestName.js
+  530  node shortestName.js
+  531  node shortestName.js
+  532  node shortestName.js
+  533  node shortestName.js
+  534  node shortestName.js
+  535  node shortestName.js
+  536  node shortestName.js
+  537  node shortestName.js
+  538  node shortestName.js
+  539  node shortestName.js
+  540  node shortestName.js
+  541  node shortestName.js
+  542  node shortestName.js
+  543  node shortestName.js
+  544  node shortestName.js
+  545  node shortestName.js
+  546  node shortestName.js
+  547  node shortestName.js
+  548  node shortestName.js
+  549  node shortestName.js
+  550  node shortestName.js
+  551  node shortestName.js
+  552  node shortestName.js
+  553  node shortestName.js
+  554  node shortestName.js
+  555  node shortestName.js
+  556  node shortestName.js
+  557  clear
+  558  clear
+  559  node shortestName.js
+  560  node shortestName.js
+  561  node shortestName.js
+  562  node shortestName.js
+  563  node shortestName.js
+  564  node shortestName.js
+  565  node shortestName.js
+  566  node shortestName.js
+  567  node shortestName.js
+  568  node shortestName.js
+  569  node shortestName.js
+  570  node shortestName.js
+  571  node shortestName.js
+  572  node shortestName.js
+  573  node shortestName.js
+  574  node shortestName.js
+  575  node shortestName.js
+  576  node shortestName.js
+  577  node shortestName.js
+  578  node shortestName.js
+  579  node shortestName.js
+  580  node shortestName.js
+  581  node shortestName.js
+  582  node shortestName.js
+  583  node shortestName.js
+  584  node shortestName.js
+  585  node shortestName.js
+  586  node shortestName.js
+  587  node shortestName.js
+  588  node shortestName.js
+  589  node shortestName.js
+  590  node shortestName.js
+  591  node shortestName.js
+  592  node shortestName.js
+  593  node shortestName.js
+  594  ;s
+  595  ls
+  596  node longestName.js
+  597  ls
+  598  cd ..
+  599  ls
+  600  cd ..
+  601  ls
+  602  which git
+  603  git status
+  604  ls
+  605  cd UnderdogDevs
+  606  ls
+  607  which git
+  608  git status
+  609  git checkout -b juneTwentyTwo
+  610  git status
+  611  git add countries/nameWithinName.js babyNames
+  612  git status
+  613  git commit -m 'add new challenges to repo'
+  614  git push
+  615  git push --set-upstream origin juneTwentyTwo
+  616  git branch main
+  617  git checkout branch main
+  618  git branch
+  619  git branch main
+  620  git checkout main
+  621  git pull
+  622  git checkout -b juneTwentyTwo
+  623  git checkout -b june22
+  624  ls
+  625  mkdir typeScriptDev_2
+  626  ls
+  627  cd typeScriptDev_2
+  628  ls
+  629  touch main.ts
+  630  cd ..
+  631  ls
+  632  npm i typescript
+  633  ls
+  634  pwd
+  635  touch .gitignore
+  636  npx ts --init
+  637  npx tsc --init
+  638  npm i --save-dev typescript
+  639  npm i --save-dev ts-node
+  640  npm i --save-dev @types/node
+  641  ls
+  642  npm i --save-dev ts-node
+  643  npm i --save-dev @types/node
+  644  npm i --save-dev typescript
+  645  ls
+  646  touch .gitignore
+  647  ls
+  648  cd typeScriptDev_2
+  649  ls
+  650  mkdir src
+  651  ls
+  652  mv main.ts src
+  653  ls
+  654  pwd
+  655  npm i --save-dev typescript
+  656  npm i --save-dev typscript
+  657  clear
+  658  ls
+  659  cd .
+  660  ls
+  661  cd ..
+  662  ls
+  663  mv node_modules typeScriptDev_2
+  664  ls
+  665  cd typeScriptDev_2
+  666  ls
+  667  npm i --save-dev typescript
+  668  npm i --save-dev ts-node
+  669  npm i --save-dev @types/node
+  670  clear
+  671  npm init -y
+  672  ls
+  673  npm i --save-dev @types/node
+  674  ls
+  675  npm run build
+  676  npm run build
+  677  npm run build
+  678  npm run build
+  679  node build/main.js
+  680  node build/main.js
+  681  npm run build
+  682  npm run build
+  683  npm run build
+  684  npm run build
+  685  clear
+  686  ls
+  687  cd src
+  688  ls
+  689  node main.ts
+  690  clear
+  691  ls
+  692  cd ..
+  693  ls
+  694  node src/main.ts
+  695  clear
+  696  ls
+  697  node build/main.js
+  698  clear
+  699  ls
+  700  cd ..
+  701  ls
+  702  cd tsConfig
+  703  ls
+  704  mv README.md UDACITY_
+  705  ls
+  706  cd ..
+  707  touch README.md
+  708  git status
+  709  git checkout -b juneTwentyOne
+  710  git status
+  711  git add .gitignore README.md typeScriptDev_2
+  712  git status
+  713  git -u
+  714  git add .
+  715  git status
+  716  git commit -m 'add typeScript Dev exercise to repo'
+  717  git push
+  718   git push --set-upstream origin juneTwentyOne
+  719  clear
+  720  ls
+  721  node modifyProperties.js
+  722  git status
+  723  git add ./
+  724  git status
+  725  clear
+  726  node modifyProperties.js
+  727  node modifyProperties.js
+  728  node modifyProperties.js
+  729  node modifyProperties.js
+  730  clear
+  731  node modifyProperties.js
+  732  node modifyProperties.js
+  733  node modifyProperties.js
+  734  node modifyProperties.js
+  735  node modifyProperties.js
+  736  node modifyProperties.js
+  737  node modifyProperties.js
+  738  node modifyProperties.js
+  739  node modifyProperties.js
+  740  node modifyProperties.js
+  741  node modifyProperties.js
+  742  node modifyProperties.js
+  743  node modifyProperties.js
+  744  node modifyProperties.js
+  745  node modifyProperties.js
+  746  node modifyProperties.js
+  747  node modifyProperties.js
+  748  node modifyProperties.js
+  749  node modifyProperties.js
+  750  node modifyProperties.js
+  751  node modifyProperties.js
+  752  node modifyProperties.js
+  753  node modifyProperties.js
+  754  node modifyProperties.js
+  755  node modifyProperties.js
+  756  node modifyProperties.js
+  757  node modifyProperties.js
+  758  node modifyProperties.js
+  759  node modifyProperties.js
+  760  node functionsAtRuntime
+  761  node functionsAtRuntime
+  762  clear
+  763  ls
+  764  cd Functions
+  765  node functionsAtRuntime.js
+  766  node functionsAtRuntime.js
+  767  node functionsAtRuntime.js
+  768  node functionsAtRuntime.js
+  769  node functionsAtRuntime.js
+  770  node functionsAtRuntime.js
+  771  node functionsAtRuntime.js
+  772  node functionsAtRuntime.js
+  773  node functionsAtRuntime.js
+  774  node callBackFunctions.js
+  775  node callBackFunctions.js
+  776  node callBackFunctions.js
+  777  node callBackFunctions.js
+  778  node callBackFunctions.js
+  779  node callBackFunctions.js
+  780  node callBackFunctions.js
+  781  node callBackFunctions.js
+  782  node callBackFunctions.js
+  783  node callBackFunctions.js
+  784  ls
+  785  cd countries
+  786  ls
+  787  node nameWithinName.js
+  788  node nameWithinName.js
+  789  ls
+  790  cd ..
+  791  ls
+  792  cd babyNames
+  793  ls
+  794  node scrabble.js
+  795  node scrabble.js
+  796  node scrabble.js
+  797  node scrabble.js
+  798  node scrabble.js
+  799  node scrabble.js
+  800  node scrabble.js
+  801  node scrabble.js
+  802  node scrabble.js
+  803  node scrabble.js
+  804  node scrabble.js
+  805  node scrabble.js
+  806  node scrabble.js
+  807  clear
+  808  node scrabble.js
+  809  node scrabble.js
+  810  node scrabble.js
+  811  node scrabble.js
+  812  node scrabble.js
+  813  node scrabble.js
+  814  node scrabble.js
+  815  node scrabble.js
+  816  node scrabble.js
+  817  time node scrabble.js
+  818  time node scrabble.js
+  819  node scrabble.js
+  820  node scrabble.js
+  821  node scrabble.js
+  822  node scrabble.js | more
+  823  node scrabble.js | more
+  824  node scrabble.js
+  825  node scrabble.js
+  826  node scrabble.js
+  827  node scrabble.js
+  828  ls
+  829  cd ..
+  830  ls
+  831  cd countries
+  832  ls
+  833  node oneVowel.js
+  834  node oneVowel.js
+  835  node oneVowel.js
+  836  cd ..
+  837  ls
+  838  cd ..
+  839  ls
+  840  cd UnderdogDevs
+  841  ls
+  842  cd babyNames
+  843  ls
+  844  ls
+  845  node scrabble.js
+  846  node scrabble.js
+  847  node scrabble.js
+  848  ls
+  849  cd /
+  850  ls
+  851  cd Volumes
+  852  ls
+  853  cd My\ Passport\ for\ Mac\ -\ Data
+  854  ls
+  855  cd UnderDog_Devs
+  856  ls
+  857  cd UnderdogDevs
+  858  ls
+  859  code .
+  860  clear
+  861  ls
+  862  code .
+  863  ls
+  864  cd babyNames
+  865  ls
+  866  node scrabble.js
+  867  node scrabble.js
+  868  node scrabble.js
+  869  node scrabble.js
+  870  node scrabble.js
+  871  node scrabble.js
+  872  node scrabble.js
+  873  node scrabble.js
+  874  node scrabble.js
+  875  node scrabble.js
+  876  node scrabble.js
+  877  node scrabble.js
+  878  node scrabble.js
+  879  node scrabble.js
+  880  node scrabble.js
+  881  node scrabble.js
+  882  node scrabble.js
+  883  node scrabble.js
+  884  node scrabble.js
+  885  node scrabble.js
+  886  node scrabble.js
+  887  node scrabble.js
+  888  node scrabble.js
+  889  node scrabble.js
+  890  node scrabble.js
+  891  node scrabble.js
+  892  node scrabble.js
+  893  node scrabble.js
+  894  node scrabble.js
+  895  node scrabble.js
+  896  node scrabble.js
+  897  node scrabble.js
+  898  node scrabble.js
+  899  node scrabble.js
+  900  node scrabble.js
+  901  node scrabble.js
+  902  node scrabble.js
+  903  node scrabble.js
+  904  node scrabble.js
+  905  node scrabble.js
+  906  node scrabble.js
+  907  node scrabble.js
+  908  node scrabble.js
+  909  node scrabble.js
+  910  node scrabble.js
+  911  node scrabble.js
+  912  node scrabble.js
+  913  node scrabble.js
+  914  node scrabble.js
+  915  node scrabble.js
+  916  node scrabble.js
+  917  node scrabble.js
+  918  node scrabble.js
+  919  node scrabble.js
+  920  ls
+  921  cd ..
+  922  ls
+  923  cd ..
+  924  ls
+  925  git status
+  926  cd ..
+  927  ls
+  928  cd UnderDog_Devs
+  929  ls
+  930  git status
+  931  cd UnderdogDevs
+  932  ls
+  933  git status
+  934  git add countries/oneVowel.js babyNames/scrabble.js wordplay/sowpods.txt babyNames/sowpods.txt
+  935  git checkout -b june23
+  936  git status
+  937  git commit -m 'add programming practice problems to repo'
+  938  git push
+  939  git push --set-upstream origin june23
+  940  git checkout main
+  941  git pull
+  942  mkdir jasmineTest
+  943  ls
+  944  cd jasmineTest
+  945  ls
+  946  ls
+  947  mkdir spec
+  948  ls
+  949  cd spec
+  950  ls
+  951  mkdir support
+  952  ls
+  953  cd support
+  954  ls
+  955  touch jasmine.json
+  956  ls
+  957  cd ..
+  958  cd ..
+  959  ls
+  960  cd TSCON
+  961  ls
+  962  cd udacity_
+  963  ls
+  964  cd jasmineTest
+  965  ls
+  966  npm init -y
+  967  npm i node
+  968  npm i typescript --save-dev
+  969  npx tsc --init
+  970  npm i --save-dev ts-node
+  971  npm i --save-dev @types/node
+  972  npm i jasmine
+  973  npm i jasmine-spec-reporter
+  974  npm i --save-dev @types/jasmine
+  975  npm run jasmine
+  976  npm run build
+  977  npm run jasmine
+  978  npm run test
+  979  npm run test
+  980  clear
+  981  npm run test
+  982  git status
+  983  git checkout -b june23
+  984  git status
+  985  git add ./
+  986  git status
+  987  git commit -m 'add jasmine config to repo'
+  988  git status
+  989  git push
+  990  git push --set-upstream origin june23
+  991  git checkout main
+  992  git branch
+  993  git checkout master
+  994  git pull
+  995  ls
+  996  cd TSCON
+  997  ls
+  998  cd udacity_
+  999  ls
+ 1000  code .
+ 1001  vagrant status
+ 1002  vagrant up
+ 1003  vagrant ssh
+ 1004  whoami
+ 1005  hostname
+ 1006  pwd
+ 1007  vagrant ssh
+ 1008  vagrant destroy
+ 1009  vagrant up
+ 1010  vagrant ssh
+ 1011  ssh vagrant@localhost
+ 1012  ssh vagrant@localhost -p 2222
+ 1013  ssh vagrant@localhost -p 2222
+ 1014  ls -ls
+ 1015  ls -la
+ 1016  ls -la ~
+ 1017  cd .ssh
+ 1018  pwd
+ 1019  cd ..
+ 1020  ls
+ 1021  ls -la
+ 1022  cd .ssh
+ 1023  ls
+ 1024  cat id_ed25519.pub
+ 1025  cd ..
+ 1026  ls
+ 1027  cd pantera
+ 1028  ls
+ 1029  vagrant destroy
+ 1030  vagrant up
+ 1031  ssh vagrant@localhost -p 2222
+ 1032  ssh -i ~/.ssh/id_ed25519 vagrant@localhost -p 2222
+ 1033  cat ~/.ssh/id_ed25519.pub
+ 1034  ssh -i ~/.ssh/id_ed25519 vagrant@localhost -p 2222
+ 1035  ssh -i ~/.ssh/id_ed25519 vagrant@localhost -p 2222
+ 1036  history
+ 1037  history 0
+ 1038  ls
+ 1039  history 0
+1  exit
+    2  nano .ssh/authorized_keys 
+    3  exit
+    4  apt update
+    5  sudo apt update
+    6  sudo apt install nginx
+    7  curl http://localhost:80
+    8  history
