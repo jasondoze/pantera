@@ -13,71 +13,71 @@ Absolute and Relative - absolute is the whole path from the start of the root
 
 ps command
 
-man -for manual, read the manual
+    man -for manual, read the manual
 
-man ps
+    man ps
 
-less -page through files
+    less -page through files
 
-man less
+    man less
 
-man zsh
+    man zsh
 
-whoami -user of the comp
+    whoami -user of the comp
 
-hostname -name of my comp
+    hostname -name of my comp
 
 $: $ sign is used in the shell to retrieve the value of variables.
 
 echo: echo command is used to print the text or string to the shell or output file.
 
-echo 'hello world'
+    echo 'hello world'
 
-echo $SHELL
+    echo $SHELL
 
-echo $USER
+    echo $USER
 
-echo $HOME
+    echo $HOME
 
-which ls
+    which ls
 
-which echo
+    which echo
 
-mkdir pantera
+    mkdir pantera
 
-nano test.js
+    nano test.js
 
-cat test.js
+    cat test.js
 
-man node
+    man node
 
-node test.js
+    node test.js
 
-nano README.md
+    nano README.md
 
-which git
+    which git
 
-ls -la
+    ls -la
 
-ls .git
+    ls .git
 
-rm -r .git
+    rm -r .git
 
-git init
+    git init
 
-git branch -m main
+    git branch -m main
 
-git remote -v
+    git remote -v
 
-git push -u origin main
+    git push -u origin main
 
-git diff README.md
+    git diff README.md
 
-git push origin main
+    git push origin main
 
-history
+    history
 
-env
+    env
 
 <br>
 
@@ -154,17 +154,17 @@ is the creation of a virtual -- rather than actual -- version of something, such
 
 <br>
 
- curl -L 'https://www.dropbox.com/s/k6xcq55tqanbdmz/countries.txt?dl=0' 
+    curl -L 'https://www.dropbox.com/s/k6xcq55tqanbdmz/countries.txt?dl=0' 
 
- curl -L 'https://www.dropbox.com/s/k6xcq55tqanbdmz/countries.txt?dl=0' > curlCountries.txt
+    curl -L 'https://www.dropbox.com/s/k6xcq55tqanbdmz/countries.txt?dl=0' > curlCountries.txt
 
- curl -L 'https://www.dropbox.com/s/k6xcq55tqanbdmz/countries.txt?dl=0'
+    curl -L 'https://www.dropbox.com/s/k6xcq55tqanbdmz/countries.txt?dl=0'
 
- curl -L 'https://www.dropbox.com/s/k6xcq55tqanbdmz/countries.txt?dl=0' | grep United
+    curl -L 'https://www.dropbox.com/s/k6xcq55tqanbdmz/countries.txt?dl=0' | grep United
 
- man grep
- 
- curl -L 'https://www.dropbox.com/s/k6xcq55tqanbdmz/countries.txt?dl=0' | grep "^U"
+    man grep
+    
+    curl -L 'https://www.dropbox.com/s/k6xcq55tqanbdmz/countries.txt?dl=0' | grep "^U"
 
  <br>
 
@@ -183,19 +183,19 @@ print the node version in the pipeline on github
 
 ### entropy- lack of predictability
 
-git checkout -b doze/deploy
+    git checkout -b doze/deploy
 
-git diff
+    git diff
 
-nano deploy.sh
+    nano deploy.sh
 
-bash deploy.sh
+    bash deploy.sh
 
-man sudo
+    man sudo
 
-git add strings.js deploy.sh
+    git add strings.js deploy.sh
 
-git commit -m 'add deploy script'
+    git commit -m 'add deploy script'
 
 ## copy file
 tar -cf pantera-550f491.tar pantera/ 
@@ -207,7 +207,7 @@ Jira Software is an agile project management tool that supports any agile method
 
 <br>
 
-look into dev-ops 
+# dev-ops 
 https://www.udemy.com/topic/devops/
 <br>
 <br>
@@ -291,21 +291,18 @@ An artifact repository provides a central location to store those builds, and mo
 <br>
 
 ![image info](images/softwareDevelopmentLifecycle.jpeg)
-
-client- log in  -server
-
-secure shell SSH- ip address, 
-rsa encryption- public key encryption- making a set of keys, public and private
-server has a public key, and I have the private key
-generate a key pair, I keep one, and the server keeps the other
+![image info](images/Software_Dev_Pipeline_2.png)
 
 <br>
 <br>
+
+# secure shell SSH
 
 ![image info](images/RSA_encryption.png)
 
 <br>
 <br>
+
 # RSA 
 (Rivest–Shamir–Adleman) is a public-key cryptosystem that is widely used for secure data transmission. It is also one of the oldest. The acronym "RSA" comes from the surnames of Ron Rivest, Adi Shamir and Leonard Adleman, who publicly described the algorithm in 1977. An equivalent system was developed secretly in 1973 at GCHQ (the British signals intelligence agency) by the English mathematician Clifford Cocks. That system was declassified in 1997.
 
@@ -316,119 +313,94 @@ The security of RSA relies on the practical difficulty of factoring the product 
 RSA is a relatively slow algorithm. Because of this, it is not commonly used to directly encrypt user data. More often, RSA is used to transmit shared keys for symmetric-key cryptography, which are then used for bulk encryption–decryption.
 
 <br>
+
+# SSH
+![image info](images/SSH.png)
+
+<br>
 <br>
 
-![image info](images/Software_Dev_Pipeline_2.png)
+# IAC Infrastructure as Code
 
-Phoenix Project 
+![image info](images/infrastructureAsCode.png)
 
+<br>
+<br>
+
+# Vagrant(s)
 brew install vagrant virtualbox
+
 allow vbox in system security
+
 run install again
-mkdir provision
-cd provision
-vagrant init
-in the Vagrantfile “base” change that to “hashicorp/bionic64”
-vagrant up
-vagrant ssh
-exit
-vagrant destroy
-vagrant help
 
-jasondoze13@JCD pantera % vagrant up
-Bringing machine 'default' up with 'virtualbox' provider...
-==> default: Box 'hashicorp/bionic64' could not be found. Attempting to find and install...
-    default: Box Provider: virtualbox
-    default: Box Version: >= 0
-==> default: Loading metadata for box 'hashicorp/bionic64'
-    default: URL: https://vagrantcloud.com/hashicorp/bionic64
-==> default: Adding box 'hashicorp/bionic64' (v1.0.282) for provider: virtualbox
-    default: Downloading: https://vagrantcloud.com/hashicorp/boxes/bionic64/versions/1.0.282/providers/virtualbox.box
-==> default: Successfully added box 'hashicorp/bionic64' (v1.0.282) for 'virtualbox'!
-==> default: Importing base box 'hashicorp/bionic64'...
-==> default: Matching MAC address for NAT networking...
-==> default: Checking if box 'hashicorp/bionic64' version '1.0.282' is up to date...
-==> default: Setting the name of the VM: pantera_default_1655928475013_10854
-Vagrant is currently configured to create VirtualBox synced folders with
-the `SharedFoldersEnableSymlinksCreate` option enabled. If the Vagrant
-guest is not trusted, you may want to disable this option. For more
-information on this option, please refer to the VirtualBox manual:
+    mkdir provision
 
-  https://www.virtualbox.org/manual/ch04.html#sharedfolders
+    cd provision
 
-This option can be disabled globally with an environment variable:
+    vagrant init
 
-  VAGRANT_DISABLE_VBOXSYMLINKCREATE=1
+in the Vagrantfile “base” change that to “hashicorp/
+bionic64”
 
-or on a per folder basis within the Vagrantfile:
+    vagrant up
 
-  config.vm.synced_folder '/host/path', '/guest/path', SharedFoldersEnableSymlinksCreate: false
-==> default: Clearing any previously set network interfaces...
-==> default: Preparing network interfaces based on configuration...
-    default: Adapter 1: nat
-==> default: Forwarding ports...
+    vagrant ssh
+
+    exit
+
+    vagrant destroy
+
+    vagrant help
+
+<br>
+
+    default: Forwarding ports...
+
     default: 22 (guest) => 2222 (host) (adapter 1)
-==> default: Booting VM...
-==> default: Waiting for machine to boot. This may take a few minutes...
+
+    default: Booting VM...
+
+    default: Waiting for machine to boot. This may take a few minutes...
+
     default: SSH address: 127.0.0.1:2222
     default: SSH username: vagrant
-    default: SSH auth method: private key
-    default: Warning: Connection reset. Retrying...
-    default: Warning: Remote connection disconnect. Retrying...
-    default: 
-    default: Vagrant insecure key detected. Vagrant will automatically replace
-    default: this with a newly generated keypair for better security.
-    default: 
-    default: Inserting generated public key within guest...
-    default: Removing insecure key from the guest if it's present...
-    default: Key inserted! Disconnecting and reconnecting using new SSH key...
-==> default: Machine booted and ready!
-==> default: Checking for guest additions in VM...
-    default: The guest additions on this VM do not match the installed version of
-    default: VirtualBox! In most cases this is fine, but in rare cases it can
-    default: prevent things such as shared folders from working properly. If you see
-    default: shared folder errors, please make sure the guest additions within the
-    default: virtual machine match the version of VirtualBox you have installed on
-    default: your host and reload your VM.
-    default: 
-    default: Guest Additions Version: 6.0.10
-    default: VirtualBox Version: 6.1
-==> default: Mounting shared folders...
-    default: /vagrant => /Users/jasondoze13/pantera
-
-jasondoze13@JCD pantera % vagrant ssh
-Welcome to Ubuntu 18.04.3 LTS (GNU/Linux 4.15.0-58-generic x86_64)
-
- * Documentation:  https://help.ubuntu.com
- * Management:     https://landscape.canonical.com
- * Support:        https://ubuntu.com/advantage
-
-  System information as of Wed Jun 22 20:09:44 UTC 2022
-
-  System load:  0.33              Processes:           93
-  Usage of /:   2.5% of 61.80GB   Users logged in:     0
-  Memory usage: 11%               IP address for eth0: 10.0.2.15
-  Swap usage:   0%
-
- * Super-optimized for small spaces - read how we shrank the memory
-   footprint of MicroK8s to make it the smallest full K8s around.
-
-   https://ubuntu.com/blog/microk8s-memory-optimisation
-
-0 packages can be updated.
-0 updates are security updates.
+   
+    vagrant@vagrant:~$ exit
+    logout
+    Connection to 127.0.0.1 closed.
 
 
-vagrant@vagrant:~$ exit
-logout
-Connection to 127.0.0.1 closed.
+    cd .ssh
 
-jasondoze13@JCD pantera % vagrant destroy
-    default: Are you sure you want to destroy the 'default' VM? [y/N] y
-==> default: Forcing shutdown of VM...
-==> default: Destroying VM and associated drives...
+    cat id_ed25519.pub
 
- sudo apt update
- sudo apt install nginx
+    cd ..
 
- ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJq6SeyOmHGNpubTu5cyO0uvbZOittSOYTdOEL9Mj2te jdoze@protonmail.com
+    ssh vagrant@localhost -p 2222
+
+    cat ~/.ssh/id_ed25519.pub
+
+    ssh -i ~/.ssh/id_ed25519 vagrant@localhost -p 2222
+
+    history 0
+
+    nano .ssh/authorized_keys 
+
+    exit
+
+    apt update
+
+    sudo apt update
+
+    sudo apt install nginx
+
+    curl http://localhost:80
+
+    history
+
+    sudo apt update
+
+    sudo apt install nginx
+
+    ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJq6SeyOmHGNpubTu5cyO0uvbZOittSOYTdOEL9Mj2te jdoze@protonmail.com
