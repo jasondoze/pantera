@@ -402,8 +402,7 @@ bionic64”
     sudo apt update
 
     sudo apt install nginx
-ls
-    ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJq6SeyOmHGNpubTu5cyO0uvbZOittSOYTdOEL9Mj2te jdoze@protonmail.com
+
 
   
     2  ls -la
@@ -458,3 +457,4 @@ ls
    51  django --version
    52  python3 -m django --version
    53  history
+
