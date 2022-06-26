@@ -403,4 +403,58 @@ bionic64”
 
     sudo apt install nginx
 
-    
+
+  
+    2  ls -la
+    3  cd $WORKON_HOME
+    4  LS
+    5  ls
+    6  pwd
+    7  sudo apt install python python-pip
+    8  apt-get update
+    9  sudo apt install python3
+   10  python --version
+   11  ls
+   12  ls -la
+   13  pip install virtualenv
+   14  python --version
+   15  python3 --version
+   16  ubuntu --version
+   17  cat /etc/issue
+   18  sudo install python3-pip
+   19  install --help
+   20  sudo install django
+   21  sudo apt install django
+   22  apt update
+   23  sudo apt install nginx
+   24  cd .ssh
+   25  ls
+   26  cd authorized_keys 
+   27  ls
+   28  ls -la
+   29  cd ..
+   30  ls
+   31  ls -la
+   32  ssh vagrant@localhost -p 2222
+   33  cat ~/.ssh/id_ed25519.pub
+   34  sudo apt update
+   35  sudo apt install nginx
+   36  sudo apt install django
+   37  sudo apt install python3-pip3
+   38  sudo apt install pip
+   39  sudo apt install python3 python-pip3
+   40  sudo apt install python3-pip
+   41  pip --version
+   42  apt pip --version
+   43  pip install virtualenv
+   44  python --version
+   45  sudo apt install python python-pip
+   46  pip --version
+   47  pip install virtualenv
+   48  python -m pip install Django
+   49  ls
+   50  ls -la
+   51  django --version
+   52  python3 -m django --version
+   53  history
+
