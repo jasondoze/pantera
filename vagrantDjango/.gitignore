@@ -433,4 +433,4 @@ dist
 ### Vagrant Patch ###
 *.box
 
-# End of https://www.toptal.com/developers/gitignore/api/macos,django,vagrant,node,python
+# End of https://www.toptal.com/developers/gitignore/api/macos,django,vagrant,node,python…
