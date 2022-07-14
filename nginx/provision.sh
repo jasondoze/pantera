@@ -1,7 +1,13 @@
-apt update
+#!/bin/bash
 
-apt-get -y install nginx
+sudo apt update
 
-service nginx start
+sudo apt install -y nginx
 
-curl http://localhost:80
+sudo mkdir /var/www/viking
+
+sudo cp /vagrant/index.html /var/www/viking/index.html
+
+sudo cp /vagrant/viking /etc/nginx/sites-enabled/viking
+
+sudo systemctl restart nginx
