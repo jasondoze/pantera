@@ -1,32 +1,62 @@
-==> default: Successfully added box 'hashicorp/bionic64' (v1.0.282) for 'virtualbox'!
-==> default: Importing base box 'hashicorp/bionic64'...
-==> default: Matching MAC address for NAT networking...
-==> default: Checking if box 'hashicorp/bionic64' version '1.0.282' is up to date...
-==> default: Setting the name of the VM: provision_default_1657060562582_20738
-Vagrant is currently configured to create VirtualBox synced folders with
-the `SharedFoldersEnableSymlinksCreate` option enabled. If the Vagrant
-guest is not trusted, you may want to disable this option. For more
-information on this option, please refer to the VirtualBox manual:
 
-  https://www.virtualbox.org/manual/ch04.html#sharedfolders
+  971   curl -L 'https://www.dropbox.com/s/8dx99bjfwh9eh38/nba_finals.csv?dl=0' -o nbaFinals.csv
+  972  cat nbaFinals.csv
+  973  rm nbaFinals.txt
+  974  ls
+  975   curl -L 'https://www.dropbox.com/s/8dx99bjfwh9eh38/nba_finals.csv?dl=0' > nbaFinals2.csv
+  976  cat nbaFinals2.csv
+  977  echo 'Jason' 
+  978  echo 'Jason' > names.txt
+  979  cat names.txt
+  980  echo 'Steve' > names.txt
+  981  cat names.txt
+  982  echo 'Jason' >>  names.txt
+  983  cat names.txt
+  984  cd
+  985  ls
+  986  cd pantera
+  987  ls
+  988  which vagrant
+  989  vagrant --version
+  990  which virtualbox
+  991  ls
+  992  ls -la
+  993  cd nginx
+  994  ls
+  995  code .
+  996  brew reinstall --cask virtual box
+  997  brew reinstall --cask virtualbox
+  998  ls
+  999  cd pantera
+ 1000  code .
+ 1001  ls
+ 1002  cd nginx
+ 1003  ls
+ 1004  vagrant up
+ 1005  vagrant ssh
+ 1006  vagrant destroy -f
+ 1007  vagrant up
+ 1008  vagrant up --provision
+ 1009  vagrant ssh
+ 1010  vagrant destroy -f
+ 1011  vagrant up
+ 1012  history 0
+ 1013  history 900
 
-This option can be disabled globally with an environment variable:
 
-  VAGRANT_DISABLE_VBOXSYMLINKCREATE=1
+vagrant up
+vagrant ssh
+cd /var/www
+sudo mkdir tutorial
+cd tutorial
+sudo "${EDITOR:-vi}" index.html
 
-or on a per folder basis within the Vagrantfile:
-
-  config.vm.synced_folder '/host/path', '/guest/path', SharedFoldersEnableSymlinksCreate: false
-==> default: Clearing any previously set network interfaces...
-==> default: Preparing network interfaces based on configuration...
-    default: Adapter 1: nat
-==> default: Forwarding ports...
-    default: 22 (guest) => 2222 (host) (adapter 1)
-==> default: Booting VM...
-There was an error while executing `VBoxManage`, a CLI used by Vagrant
-for controlling VirtualBox. The command and stderr is shown below.
-
-Command: ["startvm", "225e5014-bb71-46f7-93c1-633005d6bb9a", "--type", "headless"]
-
-Stderr: VBoxManage: error: The virtual machine 'provision_default_1657060562582_20738' has terminated unexpectedly during startup with exit code 1 (0x1)
-VBoxManage: error: Details: code NS_ERROR_FAILURE (0x80004005), component MachineWrap, interface IMachine
+  1  cat /var/www/viking/index.html 
+    2  cd /etc/nginx/sites-enabled/
+    3  sudo nano viking
+    4  sudo systemctl restart nginx
+    5  curl localhost:81
+    6  ls
+    7  cat viking
+    8  cp viking /vagrant/
+    9  history 
