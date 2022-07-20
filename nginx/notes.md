@@ -510,14 +510,6 @@ You can list all the public keys you have by doing:
 
 $ ls ~/.ssh/*.pub
 
-jasondoze@jd ~ % cat /etc/ssh/ssh_config                                      
-#	$OpenBSD: ssh_config,v 1.35 2020/07/17 03:43:42 dtucker Exp $
-
- This is the ssh client system-wide configuration file.  See
- ssh_config(5) for more information.  This file provides defaults for
- users, and the values can be changed in per-user configuration files
- or on the command line.
-
  Configuration data is parsed as follows:
   1. command line options
   2. user-specific file
@@ -568,12 +560,7 @@ Host *
     SendEnv LANG LC_*
 
 jasondoze@jd ~ % ls ~/.ssh/*.pub
-/Users/jasondoze/.ssh/id_ed25519.pub
-jasondoze@jd ~ % cat /Users/jasondoze/.ssh/id_ed25519.pub 
-ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIA022LknBYQn4W0t/me5wNABLIYIpDIHTa+Mb2mrOI5x jdoze@protonmail.com
-jasondoze@jd ~ % cat /Users/jasondoze/.ssh/id_rsa    
-jasondoze@jd ~ % which vagrant
-/usr/local/bin/vagrant
+
 
 jasondoze@jd nginx % vagrant ssh-config
 Host default
@@ -586,52 +573,6 @@ Host default
   IdentityFile /Users/jasondoze/pantera/nginx/.vagrant/machines/default/virtualbox/private_key
   IdentitiesOnly yes
   LogLevel FATAL
-
-  jasondoze@jd nginx % ssh -i /Users/jasondoze/pantera/nginx/.vagrant/machines/default/virtualbox/private_key vagrant@127.0.0.1 -p 2222
-The authenticity of host '[127.0.0.1]:2222 ([127.0.0.1]:2222)' can't be established.
-ED25519 key fingerprint is SHA256:VPx7mYuBsJ55P9/hfFuuYIjMx9XjpMRWIy4wC5fiG4Y.
-This key is not known by any other names
-Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
-Warning: Permanently added '[127.0.0.1]:2222' (ED25519) to the list of known hosts.
-Welcome to Ubuntu 18.04.3 LTS (GNU/Linux 4.15.0-58-generic x86_64)
-
- * Documentation:  https://help.ubuntu.com
- * Management:     https://landscape.canonical.com
- * Support:        https://ubuntu.com/advantage
-
-  System information as of Tue Jul 19 00:32:43 UTC 2022
-
-  System load:  0.0               Processes:           91
-  Usage of /:   2.7% of 61.80GB   Users logged in:     0
-  Memory usage: 13%               IP address for eth0: 10.0.2.15
-  Swap usage:   0%
-
- * Super-optimized for small spaces - read how we shrank the memory
-   footprint of MicroK8s to make it the smallest full K8s around.
-
-   https://ubuntu.com/blog/microk8s-memory-optimisation
-
-273 packages can be updated.
-215 updates are security updates.
-
-
-ssh -i /Users/jasondoze/pantera/nginx/.vagrant/machines/default/virtualbox/private_key vagrant@127.0.0.1 -p 2222
-
-The code starts by creating a new SSH key.
-
-This is done with the ssh-keygen command.
-
-The -i option specifies where to find the private key file, and the -o option specifies that password authentication should be disabled.
-
-The next step is to connect to the server using this newly created SSH key.
-To do so, we use vagrant@127.0.0.1 as our username and 2222 as our port number 
-The code is used to SSH into the Vagrant machine.
-
-The first line of code creates a new key pair and saves it in the file /Users/jasondoze/pantera/nginx/.vagrant/machines/default/virtualbox/private_key 
-
-The second line of code uses this private key to SSH into the Vagrant machine using password authentication instead of public key authentication.
-
-ssh -i /Users/rahul/myvagrantmachine/.vagrant/machines/elkserver/virtualbox/private_key -o PasswordAuthentication=no vagrant@127.0.0.1 -p 3150
 
 # How to add a users ssh key for login
 1. Create an ssh key pair for the user
