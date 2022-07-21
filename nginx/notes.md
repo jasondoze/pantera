@@ -587,3 +587,8 @@ cat .ssh/authorized_keys
    
 SSH using private key
 1. ssh -i ~/.ssh/id_ed25519 vagrant@localhost -p 2222
+
+Read about Bash exit codes
+Awk, Sed, Grep, Cut
+
+git rm -r --cached .vagrant
