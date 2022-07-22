@@ -592,3 +592,8 @@ Read about Bash exit codes
 Awk, Sed, Grep, Cut
 
 git rm -r --cached .vagrant
+
+memorize 
+vagrant up, ssh, install nginx, curl, prove its running systemctl, 
+show disk usage on virtual machine/ linux
+show ip address of virtual machine 
