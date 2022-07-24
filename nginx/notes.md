@@ -104,27 +104,27 @@ list all escape characters in javascript and zshell
 
 ## zsh
 
-escape -double-quotes in double-quotes
+    escape -double-quotes in double-quotes
 
-escape -$'s in double-quotes
+    escape -$'s in double-quotes
 
-escape -the escape character \
+    escape -the escape character \
 
 don't escape the single-quotes -- you don't want a literal single-quote, but just group the command into one parameter
 
 ## JavaScript
 
-\b -Backspace
+    \b -Backspace
 
-\f -Form Feed
+    \f -Form Feed
 
-\n -New Line
+    \n -New Line
 
-\r -Carriage Return
+    \r -Carriage Return
 
-\t -Horizontal Tabulator
+    \t -Horizontal Tabulator
 
-\v -Vertical Tabulator
+    \v -Vertical Tabulator
 
 <br>
 
@@ -356,22 +356,7 @@ bionic64”
 
 <br>
 
-    default: Forwarding ports...
 
-    default: 22 (guest) => 2222 (host) (adapter 1)
-
-    default: Booting VM...
-
-    default: Waiting for machine to boot. This may take a few minutes...
-
-    default: SSH address: 127.0.0.1:2222
-    default: SSH username: vagrant
-   
-    vagrant@vagrant:~$ exit
-    logout
-    Connection to 127.0.0.1 closed.
-
-<br>
 
 # Port Forwarding
 
@@ -379,45 +364,6 @@ bionic64”
 
 <br>
 
-    cd .ssh
-
-    cat id_ed25519.pub
-
-    cd ..
-
-    ssh vagrant@localhost -p 2222
-
-    cat ~/.ssh/id_ed25519.pub
-
-    ssh -i ~/.ssh/id_ed25519 vagrant@localhost -p 2222
-
-    history 0
-
-    nano .ssh/authorized_keys 
-
-    exit
-
-    apt update
-
-    sudo apt update
-
-    sudo apt install nginx
-
-    curl http://localhost:80
-
-    history
-
-    sudo apt update
-
-    sudo apt install nginx
-    
-    curl -L 'https://www.dropbox.com/s/8dx99bjfwh9eh38/nba_finals.csv?dl=0' -o nbaFinals.csv
-
-    cat nbaFinals.csv
-
-    curl -L 'https://www.dropbox.com/s/8dx99bjfwh9eh38/nba_finals.csv?dl=0' > nbaFinals2.csv
-
-    cat nbaFinals2.csv
 
     echo 'Jason' 
     echo 'Jason' > names.txt
@@ -429,7 +375,6 @@ bionic64”
     which vagrant
     vagrant --version
     which virtualbox
-    brew reinstall --cask virtual box
     brew reinstall --cask virtualbox
     vagrant up
     vagrant ssh
@@ -437,7 +382,6 @@ bionic64”
     sudo mkdir tutorial
     cd tutorial
     sudo "${EDITOR:-vi}" index.html
-
     cat /var/www/viking/index.html 
     cd /etc/nginx/sites-enabled/
     sudo nano viking
@@ -506,94 +450,177 @@ Figure out how to add public key to vagrant vm
 Ssh -i  vagrant@localhost -p 2222 -make this command work
 
 
-You can list all the public keys you have by doing:
 
-$ ls ~/.ssh/*.pub
-
- Configuration data is parsed as follows:
-  1. command line options
-  2. user-specific file
-  3. system-wide file
- Any configuration value is only changed the first time it is set.
- Thus, host-specific definitions should be at the beginning of the
- configuration file, and defaults at the end.
-
- This Include directive is not part of the default ssh_config shipped with
- OpenSSH. Options set in the included configuration files generally override
- those that follow.  The defaults only apply to options that have not been
- explicitly set.  Options that appear multiple times keep the first value set,
- unless they are a multivalue option such as IdentityFile.
-Include /etc/ssh/ssh_config.d/*
-
- Site-wide defaults for some commonly used options.  For a comprehensive
- list of available options, their meanings and defaults, please see the
- ssh_config(5) man page.
-
- Host *
-   ForwardAgent no
-   ForwardX11 no
-   PasswordAuthentication yes
-   HostbasedAuthentication no
-   GSSAPIAuthentication no
-   GSSAPIDelegateCredentials no
-   BatchMode no
-   CheckHostIP yes
-   AddressFamily any
-   ConnectTimeout 0
-   StrictHostKeyChecking ask
-   IdentityFile ~/.ssh/id_rsa
-   IdentityFile ~/.ssh/id_dsa
-   IdentityFile ~/.ssh/id_ecdsa
-   IdentityFile ~/.ssh/id_ed25519
-   Port 22
-   Ciphers aes128-ctr,aes192-ctr,aes256-ctr,aes128-cbc,3des-cbc
-   MACs hmac-md5,hmac-sha1,umac-64@openssh.com
-   EscapeChar ~
-   Tunnel no
-   TunnelDevice any:any
-   PermitLocalCommand no
-   VisualHostKey no
-   ProxyCommand ssh -q -W %h:%p gateway.example.com
-   RekeyLimit 1G 1h
-   UserKnownHostsFile ~/.ssh/known_hosts.d/%k
-Host *
-    SendEnv LANG LC_*
-
-jasondoze@jd ~ % ls ~/.ssh/*.pub
+<br>
 
 
-jasondoze@jd nginx % vagrant ssh-config
-Host default
-  HostName 127.0.0.1
-  User vagrant
-  Port 2222
-  UserKnownHostsFile /dev/null
-  StrictHostKeyChecking no
-  PasswordAuthentication no
-  IdentityFile /Users/jasondoze/pantera/nginx/.vagrant/machines/default/virtualbox/private_key
-  IdentitiesOnly yes
-  LogLevel FATAL
+# Awk     -read about Bash exit codes
+    awk ‘cmds’ file(s)      Invokes the awk commands (cmds) on the file or files (file(s))
 
-# How to add a users ssh key for login
-1. Create an ssh key pair for the user
-`ssh-keygen -t ed25519 -C "jdoze@protonmail.com"`
+    $1 $2 $3...             Denotes the first, second, third, and so on fields respectively in a file
 
-3. Login to the server
-`vagrant ssh`
+    $0                      Denotes an entire line in a field
 
-4. Add users public key to the file ~/.ssh/authorized_keys
-`nano .ssh/authorized_keys`
-cat .ssh/authorized_keys 
-   
-SSH using private key
-1. ssh -i ~/.ssh/id_ed25519 vagrant@localhost -p 2222
+    {.....}                 Whatever is inside these brackets is treated as an executable step (i.e., print, x=3, n=5+$32, getline).
 
-Read about Bash exit codes
-Awk, Sed, Grep, Cut
+    {print...}              Prints whatever is designated to the screen unless the output is redirected to a file
 
-git rm -r --cached .vagrant
+    (...)                   Whatever is inside these brackets is used to test for patterns (if--then...else, while, etc.)
 
-memorize 
-vagrant up, ssh, install nginx, curl, prove its running systemctl, 
-show disk usage on virtual machine/ linux
-show ip address of virtual machine 
+    awk -f prog inputf      If the awk command line is very long, it may be placed in a program file (prog), and the input file(s) is shown as inputf.
+
+    NF                      Awk automatically counts the fields for each input line and gives the variable NF that value.
+
+    {printf(...)}           Prints using a user-supplied format
+
+    BEGIN{...}              Executes whatever is inside the brackets before starting to view the input file
+
+    END{...}                Executes whatever is inside the brackets after awk is finished reading the input file
+
+    length(field)           Counts the number of characters in a word or field (i.e., $5 or even $0)
+
+    #                       Used to comment out statements in an awk program file
+
+    array[countr]           An array with the counting variable countr (note this didn’t have to be predefined!)
+
+    /string/                Matches the current input line for string
+
+    ~/string/               Matches current input line for string by itself or as a substring
+
+    !~ /string/             Matches current input line for anything not containing string 
+
+<br>
+
+# Sed 
+    Sed syntax: sed [options] sed-command [input-file]
+
+    -n Suppress default pattern space printing          sed -n '3 p' employee.txt
+
+    -i Backup and modify input file directly            sed -ibak 's/John/Johnny/' employee.txt
+
+    -f Execute sed script file                          sed -f script.sed employee.txt
+
+    -e Execute multiple sed commands                    sed -e 'command1' -e 'command2' input-file
+
+# Grep 
+                        grep [pattern] FILE
+
+    grep '^[A,E].*o' f.txt          Find a string starting with A or E and ending in o
+
+    grep -f pat.txt f.txt           Scan f.txt, using contents of pat.txt as regex
+
+    grep -i Gnu f.txt               Find "gnu" in f.txt, ignoring capitalization
+
+    grep -v gnu f.txt               Find all lines not containing "gnu" (invert match)
+
+    grep -w 'a.*o' f.txt            Find whole word matches only, ignoring substrings
+
+    grep -x 'a.*o' f.txt            Find whole line matches only, as in ^(a.*o)$
+
+<br>
+
+# Cut
+
+# Segment types
+    segment	description
+
+    -b	    bytes
+
+    -c	    characters
+
+    -f	    fields
+
+    -d	    delimiter. Note: tab is the default delimiter
+
+<br>
+
+# Range specification
+    range	description
+
+    N	    Nth
+
+    N-M	    N to M
+
+    N-	    N to end of line
+
+    -M	    beginning to M
+
+<br>
+
+
+
+# memorize  
+    which vagrant
+    cat ~/.ssh/id_ed25519.pub
+    ssh -i ~/.ssh/id_ed25519 vagrant@localhost -p 2222
+    nano .ssh/authorized_keys
+    <!-- ssh vagrant@localhost -p 2222 -->
+    vagrant --version
+    which virtualbox
+    vagrant up,
+    vagrant status,
+    ssh, 
+    sudo apt update,
+    sudo apt install -y nginx,
+    cat .ssh/authorized_keys,
+    prove its running systemctl,
+    q to exit
+    curl localhost:80,
+    vagrant destroy -f 
+
+<br>
+
+# show disk usage on virtual machine/ linux
+`vagrant@vagrant:~$ df`
+
+    Filesystem                   1K-blocks     Used Available Use% Mounted on
+    udev                            473252        0    473252   0% /dev
+    tmpfs                           100912     5136     95776   6% /run
+    /dev/mapper/vagrant--vg-root  64800356  1718472  59760440   3% /
+    tmpfs                           504556        0    504556   0% /dev/shm
+    tmpfs                             5120        0      5120   0% /run/lock
+    tmpfs                           504556        0    504556   0% /sys/fs/cgroup
+    vagrant                      488245288 76591392 411653896  16% /vagrant
+    tmpfs                           100908        0    100908   0% /run/user/1000
+
+<br>
+
+# show ip address of virtual machine 
+
+`vagrant@vagrant:~$ ifconfig`
+
+    eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+            inet 10.0.2.15  netmask 255.255.255.0  broadcast 10.0.2.255
+            inet6 fe80::a00:27ff:febb:1475  prefixlen 64  scopeid 0x20<link>
+            ether 08:00:27:bb:14:75  txqueuelen 1000  (Ethernet)
+            RX packets 16396  bytes 21573426 (21.5 MB)
+            RX errors 0  dropped 0  overruns 0  frame 0
+            TX packets 5093  bytes 444916 (444.9 KB)
+            TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+* The code starts with a line that says "eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>".
+* This means that the Ethernet interface is up and running.
+* The next line says "mtu 1500", which means the maximum transmission unit of this interface is 1500 bytes.
+* Next we see an IP address in brackets after "<IP address>" followed by a netmask (255.255.255.0) and broadcast address (10.0.2).
+* After these two lines there are three sets of four lines each with an IP address in brackets followed by a prefix length and scope ID for each set of four lines respectively: inet 10.0 prefixlen 64 scopeid 0x20 link inet6 fe80::a00:27ff:febb:1475 prefixlen 64 scopeid 0x20 link
+* The code shows that the device is connected to a network with an IP address of 10.0.2.15 and has the prefix of 64 for IPv6 addresses, which means it's on the same network as 10.0.2.16 and 10.0.2.17
+
+        lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+                inet 127.0.0.1  netmask 255.0.0.0
+                inet6 ::1  prefixlen 128  scopeid 0x10<host>
+                loop  txqueuelen 1000  (Local Loopback)
+                RX packets 58  bytes 7134 (7.1 KB)
+                RX errors 0  dropped 0  overruns 0  frame 0
+                TX packets 58  bytes 7134 (7.1 KB)
+                TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+* The code starts with the line "inet 127.0.0.1".
+* This is the IP address of the computer running this program, and it tells other computers on your network that you are using this computer as a gateway to get to other networks.
+* The next line is "netmask 255.0.0.0", which means that all computers on your network can use any number from 0-255 for their IP addresses, so long as they are within the same subnet (i.e., if one computer has an IP address of 192 and another has an IP address of 128, then both would be in the same subnet).
+* The netmask also specifies how many bits each byte can have when used in an IP address; in this case, 8 bits per byte allows for 256 possible values for each byte (2^8 = 256).
+* Next comes "inet6 ::1" which stands for IPv6 addressing notation and prefix length 128 meaning that there will be 128 consecutive zeros at the beginning of every IPv6 address before anything else is written into it - i .e., no leading zeros or dots will be present in any given IPv6 address because they're not needed!
+
+<br>
+
+# The code will remove all files in the current directory that have been previously downloaded from a Vagrantfile.
+`git rm -r --cached .vagrant`
