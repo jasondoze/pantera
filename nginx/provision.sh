@@ -1,17 +1,31 @@
 #!/bin/bash
 
-# sudo apt update
+sudo apt update
 
-# echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIA022LknBYQn4W0t/me5wNABLIYIpDIHTa+Mb2mrOI5x jdoze@protonmail.com" >> /home/vagrant/.ssh/authorized_keys
+echo "apt udate"
 
-# sudo apt install -y nginx
+echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIA022LknBYQn4W0t/me5wNABLIYIpDIHTa+Mb2mrOI5x jdoze@protonmail.com" >> /home/vagrant/.ssh/authorized_keys
 
-# sudo mkdir -p /var/www/viking
+sudo apt install -y nginx
 
-# sudo cp /vagrant/index.html /var/www/viking/index.html
+echo "apt install nginx"
 
-# sudo cp -r /vagrant/images /var/www/viking/
+sudo mkdir -p /var/www/viking
 
-# sudo cp /vagrant/viking /etc/nginx/sites-enabled/viking
+echo "mkdir /var/www/viking"
 
-# sudo systemctl restart nginx
+sudo cp /vagrant/index.html /var/www/viking/index.html
+
+echo "cp /vagrant/index.html /var/www/viking/index.html"
+
+sudo cp -r /vagrant/images /var/www/viking/
+
+echo cp "/vagrant/images /var/www/viking/"
+
+sudo cp /vagrant/viking /etc/nginx/sites-enabled/viking
+
+echo "cp /vagrant/viking /etc/nginx/sites-enabled/viking"
+
+sudo systemctl restart nginx
+
+echo "systemctl restart nginx"
