@@ -455,6 +455,8 @@ Ssh -i  vagrant@localhost -p 2222 -make this command work
 
 
 # Awk     -read about Bash exit codes
+awk - pattern-directed scanning and processing language
+
     awk ‘cmds’ file(s)      Invokes the awk commands (cmds) on the file or files (file(s))
 
     $1 $2 $3...             Denotes the first, second, third, and so on fields respectively in a file
@@ -547,8 +549,6 @@ Ssh -i  vagrant@localhost -p 2222 -make this command work
 
 <br>
 
-
-
 # memorize  
     which vagrant
     vagrant --version
@@ -559,16 +559,22 @@ Ssh -i  vagrant@localhost -p 2222 -make this command work
     sudo apt update,
     sudo apt install -y nginx,
     cat .ssh/authorized_keys,
+    nano .ssh/authorized_keys,
     prove its running systemctl,
     q to exit
     curl localhost:80,
+    df,
+    ifconfig,
     vagrant destroy -f 
 
-    cat ~/.ssh/id_ed25519.pub
-    ssh -i ~/.ssh/id_ed25519 vagrant@localhost -p 2222
-    nano ~/.ssh/authorized_keys
-    nano .ssh/authorized_keys
+
+# Build a webserver
+
+
+
+# SSH into vagrant
     ssh vagrant@localhost -p 2222
+    ssh -i ~/.ssh/id_ed25519 vagrant@localhost -p 2222
 
 <br>
 
@@ -586,8 +592,16 @@ Ssh -i  vagrant@localhost -p 2222 -make this command work
     tmpfs                           100908        0    100908   0% /run/user/1000
 
 <br>
+homework replace 127.0.0.1 with localhost in my .sss/knownhost file using only grep sed or awk
+
+sed -i 's/old-text/new-text/g' input.txt
+
+sed -i '' -e 's/127.0.0.1/localhost/g' /Users/jasondoze/.ssh/known_hosts
+
+grep -r 'virtual' .
 
 # show ip address of virtual machine 
+
 
 `vagrant@vagrant:~$ ifconfig`
 
