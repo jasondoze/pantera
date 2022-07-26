@@ -551,10 +551,6 @@ Ssh -i  vagrant@localhost -p 2222 -make this command work
 
 # memorize  
     which vagrant
-    cat ~/.ssh/id_ed25519.pub
-    ssh -i ~/.ssh/id_ed25519 vagrant@localhost -p 2222
-    nano .ssh/authorized_keys
-    <!-- ssh vagrant@localhost -p 2222 -->
     vagrant --version
     which virtualbox
     vagrant up,
@@ -567,6 +563,12 @@ Ssh -i  vagrant@localhost -p 2222 -make this command work
     q to exit
     curl localhost:80,
     vagrant destroy -f 
+
+    cat ~/.ssh/id_ed25519.pub
+    ssh -i ~/.ssh/id_ed25519 vagrant@localhost -p 2222
+    nano ~/.ssh/authorized_keys
+    nano .ssh/authorized_keys
+    ssh vagrant@localhost -p 2222
 
 <br>
 
