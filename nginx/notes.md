@@ -567,19 +567,39 @@ awk - pattern-directed scanning and processing language
     ifconfig,
     vagrant destroy -f 
 
+whats the difference between these?
+ssh -i ~/.ssh/id_ed25519 vagrant@localhost -p 2222
+ssh vagrant@localhost -p 2222
+
+    Create an ssh key pair for the user
+    `ssh-keygen -t ed25519 -C "jdoze@protonmail.com"`
+
+    1. Login to the server
+    `vagrant ssh`
+
+    4. Add users public key to the file ~/.ssh/authorized_keys
+    `nano .ssh/authorized_keys`
+    `cat .ssh/authorized_keys` 
+    
+    5. SSH using private key
+    `ssh -i ~/.ssh/id_ed25519 vagrant@localhost -p 2222`
+
 
 # Build a webserver
+host applications on that webserver with provisions
+deploy that server, or multiples of that server from local host
 
 
 
 # SSH into vagrant
-    ssh vagrant@localhost -p 2222
-    ssh -i ~/.ssh/id_ed25519 vagrant@localhost -p 2222
+    ssh vagrant@localhost -p 2222- implicit
+    ssh -i ~/.ssh/id_ed25519 vagrant@localhost -p 2222 - explicit
 
 <br>
 
 # show disk usage on virtual machine/ linux
 `vagrant@vagrant:~$ df`
+df -h human readable
 
     Filesystem                   1K-blocks     Used Available Use% Mounted on
     udev                            473252        0    473252   0% /dev
@@ -640,3 +660,8 @@ grep -r 'virtual' .
 
 # The code will remove all files in the current directory that have been previously downloaded from a Vagrantfile.
 `git rm -r --cached .vagrant`
+
+
+<br>
+
+![image info](images/linuxFileSystem.png)
