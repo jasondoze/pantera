@@ -16,17 +16,50 @@ each place moving from right to left signifies a power of 2
 
 0000 4 bit
 
-0000 2^0 = 1
-
-0000 2^1 = 2
-
-2^2 = 4
-2^3 = 8
 
 exponents, binary math, memorize all the powers of 2, up to 32
 
-0000
-8421
+# Rule One: When you multiply two exponents with the same base, add the exponents.
+# Rule Two: When you divide two exponents with the same base, subtract the exponents.
+# Rule Three: When you have an exponent expression which is raised to a power, multiply the exponent and the power together.
+# Rule Four: Anything to the power zero is “1”.
+
+
+n		a(n)
+0		  1
+1		  2
+2		  4
+3		  8
+4		  16
+5		  32
+6		  64
+7		  128
+8		  256
+9		  512
+10		1024
+11		2048
+12		4096
+13		8192
+14		16384
+15		32768
+16		65536
+17		131072
+18		262144
+19		524288
+20		1048576
+21		2097152
+22		4194304
+23		8388608
+24		16777216
+25		33554432
+26		67108864
+27		134217728
+28		268435456
+29		536870912
+30		1073741824
+31		2147483648
+32		4294967296
+
 
 0000 = 0
 0001 = 1
@@ -67,14 +100,3 @@ add two binary numbers
 -------- +
 1011 = 11
 
-write a program that takes two strings that are 4 bit character strings and adds them as a binary string
-
-add_binary_string("0010", "0100") {
-// implement code here
-} returns "0110"
-
-binary_string_to_integer("0010") {
-for ( let i = 0; i < string.length; i++) {
-string[i]
-}
-} returns int 2
