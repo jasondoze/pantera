@@ -26,5 +26,17 @@ sudo cp /vagrant/viking /etc/nginx/sites-enabled/viking
 echo "restart the nginx service"
 sudo systemctl restart nginx
 
+echo "display device configuration"
+sudo ifconfig
+
+echo "display disk usage"
+sudo df -h
+
+echo "display nginx html"
+sudo curl localhost:80
+
+echo "display viking html"
+sudo curl localhost:81
+
 
 
