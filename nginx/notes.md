@@ -568,8 +568,8 @@ awk - pattern-directed scanning and processing language
     vagrant destroy -f 
 
 whats the difference between these?
-ssh -i ~/.ssh/id_ed25519 vagrant@localhost -p 2222
-ssh vagrant@localhost -p 2222
+ssh -i ~/.ssh/id_ed25519 vagrant@localhost -p 2222 -explicit
+ssh vagrant@localhost -p 2222 -implicit
 
     Create an ssh key pair for the user
     `ssh-keygen -t ed25519 -C "jdoze@protonmail.com"`
