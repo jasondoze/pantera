@@ -174,6 +174,8 @@ is the creation of a virtual -- rather than actual -- version of something, such
 # Big O notation
 Big O analogy: Let's say you're making dinner for the family. O is the process of following a recipe, and n is the number of times you follow a recipe. O- you make one dish that everyone eats whether they like it or not. You follow one recipe from top to bottom, then serve (1recipe). <-- How I grew up O(n) - you make individual dishes for each person. You follow a recipe from top to bottom for each person in the family (recipe times the number of people in the family). O(n^2) - you make individual dishes redundantly for every person. You follow all recipes for each person in your family (recipe times the number of people squared). O (log n) - you break people into groups according to what they want and make larger portions. You make one dish for each group (recipe times request)
 
+We use big-Θ notation to asymptotically bound the growth of a running time to within constant factors above and below. Sometimes we want to bound from only above.
+
 <br>
 
 ## 6.14.22
@@ -386,6 +388,331 @@ bionic64”
     
 <br>
 
+# Port Forwarding
+
+![image info](images/portForwarding.png)
+
+<br>
+
+```
+echo 'Jason' 
+echo 'Jason' > names.txt
+cat names.txt
+echo 'Steve' > names.txt
+cat names.txt
+echo 'Jason' >>  names.txt
+cat names.txt
+which vagrant
+vagrant --version
+which virtualbox
+brew reinstall --cask virtualbox
+vagrant up
+vagrant ssh
+cd /var/www
+sudo mkdir tutorial
+cd tutorial
+sudo "${EDITOR:-vi}" index.html
+cat /var/www/viking/index.html 
+cd /etc/nginx/sites-enabled/
+sudo nano viking
+sudo systemctl restart nginx
+curl localhost:81
+cat viking
+cp viking /vagrant/
+```
+
+
+
+Explain the provision script files, index, provision
+viking
+server {
+       listen 81;
+       listen [::]:81;
+
+       server_name viking.jdoze;
+
+       root /var/www/viking;
+       index index.html;
+
+       location / {
+               try_files $uri $uri/ =404;
+       }
+}
+
+
+* The code starts with the server listening on port 81.		
+* The code then listens for connections on all ports, but specifically port 81.	
+* It also specifies that it will be called viking.jdoze and that its root is /var/www/viking.		
+* The location directive tells Apache to serve files from a specific directory if they are requested by the client at the given URI (in this case, http://viking).	
+* If not found in that directory, Apache will return a 404 error message to the client instead of serving up an HTML file or other content.	
+* The code attempts to serve the viking.jdoze domain with a default page, index.html, which will be served if the requested URL does not exist.		
+* The server listens on port 81 and will listen for connections on any other ports by forwarding them to port 81.
+
+
+    provision.sh
+
+      #!/bin/bash
+
+      sudo apt update
+
+      sudo apt install -y nginx
+
+      sudo mkdir /var/www/viking
+
+      sudo cp /vagrant/index.html /var/www/viking/index.html
+
+      sudo cp -r /vagrant/images /var/www/viking/
+
+      sudo cp /vagrant/viking /etc/nginx/sites-enabled/viking
+
+      sudo systemctl restart nginx
+
+* The code starts by updating the system.
+* Then it installs nginx and creates a directory for the website, which is called viking.
+* It then copies over index.html into that directory, as well as all of the images from vagrant/images to viking/images.
+* Finally, it copies over the file /vagrant/viking to /etc/nginx/sites-enabled/viking so that when you restart nginx, it will use this configuration file instead of default one in /etc/.
+* The code is used to install nginx on the host machine.
+* The code creates a directory called /var/www/viking and copies index.html into it.	
+* The code then copies all of the files from the vagrant folder into the newly created directory in /var/www/viking.
+
+Figure out how to add the public ssh key
+Craft an ssh command to use instead of vagrant ssh
+Figure out how to add public key to vagrant vm
+Ssh -i  vagrant@localhost -p 2222 -make this command work
+
+
+
+<br>
+
+
+# Awk     -read about Bash exit codes
+awk - pattern-directed scanning and processing language
+
+    awk ‘cmds’ file(s)      Invokes the awk commands (cmds) on the file or files (file(s))
+
+    $1 $2 $3...             Denotes the first, second, third, and so on fields respectively in a file
+
+    $0                      Denotes an entire line in a field
+
+    {.....}                 Whatever is inside these brackets is treated as an executable step (i.e., print, x=3, n=5+$32, getline).
+
+    {print...}              Prints whatever is designated to the screen unless the output is redirected to a file
+
+    (...)                   Whatever is inside these brackets is used to test for patterns (if--then...else, while, etc.)
+
+    awk -f prog inputf      If the awk command line is very long, it may be placed in a program file (prog), and the input file(s) is shown as inputf.
+
+    NF                      Awk automatically counts the fields for each input line and gives the variable NF that value.
+
+    {printf(...)}           Prints using a user-supplied format
+
+    BEGIN{...}              Executes whatever is inside the brackets before starting to view the input file
+
+    END{...}                Executes whatever is inside the brackets after awk is finished reading the input file
+
+    length(field)           Counts the number of characters in a word or field (i.e., $5 or even $0)
+
+    #                       Used to comment out statements in an awk program file
+
+    array[countr]           An array with the counting variable countr (note this didn’t have to be predefined!)
+
+    /string/                Matches the current input line for string
+
+    ~/string/               Matches current input line for string by itself or as a substring
+
+    !~ /string/             Matches current input line for anything not containing string 
+
+<br>
+
+# Sed 
+    Sed syntax: sed [options] sed-command [input-file]
+
+    -n Suppress default pattern space printing          sed -n '3 p' employee.txt
+
+    -i Backup and modify input file directly            sed -ibak 's/John/Johnny/' employee.txt
+
+    -f Execute sed script file                          sed -f script.sed employee.txt
+
+    -e Execute multiple sed commands                    sed -e 'command1' -e 'command2' input-file
+
+# Grep 
+                        grep [pattern] FILE
+
+    grep '^[A,E].*o' f.txt          Find a string starting with A or E and ending in o
+
+    grep -f pat.txt f.txt           Scan f.txt, using contents of pat.txt as regex
+
+    grep -i Gnu f.txt               Find "gnu" in f.txt, ignoring capitalization
+
+    grep -v gnu f.txt               Find all lines not containing "gnu" (invert match)
+
+    grep -w 'a.*o' f.txt            Find whole word matches only, ignoring substrings
+
+    grep -x 'a.*o' f.txt            Find whole line matches only, as in ^(a.*o)$
+
+<br>
+
+# Cut
+
+# Segment types
+    segment	description
+
+    -b	    bytes
+
+    -c	    characters
+
+    -f	    fields
+
+    -d	    delimiter. Note: tab is the default delimiter
+
+<br>
+
+# Range specification
+    range	description
+
+    N	    Nth
+
+    N-M	    N to M
+
+    N-	    N to end of line
+
+    -M	    beginning to M
+
+<br>
+
+# memorize  
+    which vagrant
+    vagrant --version
+    which virtualbox
+    vagrant up,
+    vagrant status,
+    ssh, 
+    sudo apt update,
+    sudo apt install -y nginx,
+    cat .ssh/authorized_keys,
+    nano .ssh/authorized_keys,
+    prove its running systemctl,
+    q to exit
+    curl localhost:80,
+    df,
+    ifconfig,
+    vagrant destroy -f 
+
+## Whats the difference between these?
+ssh -i ~/.ssh/id_ed25519 vagrant@localhost -p 2222 -explicit
+ssh vagrant@localhost -p 2222 -implicit
+
+    Create an ssh key pair for the user
+    `ssh-keygen -t ed25519 -C "jdoze@protonmail.com"`
+
+    1. Login to the server
+    `vagrant ssh`
+
+    4. Add users public key to the file ~/.ssh/authorized_keys
+    `nano .ssh/authorized_keys`
+    `cat .ssh/authorized_keys` 
+    
+    5. SSH using private key
+    `ssh -i ~/.ssh/id_ed25519 vagrant@localhost -p 2222`
+
+
+# Build a webserver
+host applications on that webserver with provisions
+deploy that server, or multiples of that server from local host
+
+
+
+# SSH into vagrant
+    ssh vagrant@localhost -p 2222- implicit
+    ssh -i ~/.ssh/id_ed25519 vagrant@localhost -p 2222 - explicit
+
+<br>
+
+# show disk usage on virtual machine/ linux
+`vagrant@vagrant:~$ df`
+    df -h human readable
+
+    Filesystem                   1K-blocks     Used Available Use% Mounted on
+    udev                            473252        0    473252   0% /dev
+    tmpfs                           100912     5136     95776   6% /run
+    /dev/mapper/vagrant--vg-root  64800356  1718472  59760440   3% /
+    tmpfs                           504556        0    504556   0% /dev/shm
+    tmpfs                             5120        0      5120   0% /run/lock
+    tmpfs                           504556        0    504556   0% /sys/fs/cgroup
+    vagrant                      488245288 76591392 411653896  16% /vagrant
+    tmpfs                           100908        0    100908   0% /run/user/1000
+
+<br>
+Replace 127.0.0.1 with localhost in my .sss/knownhost file using only grep sed or awk
+<br>
+
+`sed -i 's/old-text/new-text/g' input.txt`
+
+` sed -i '' -e 's/127.0.0.1/localhost/g' /Users/jasondoze/.ssh/known_hosts`
+
+`grep -r 'virtual' `
+
+# show ip address of virtual machine 
+
+
+`vagrant@vagrant:~$ ifconfig`
+
+    eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+            inet 10.0.2.15  netmask 255.255.255.0  broadcast 10.0.2.255
+            inet6 fe80::a00:27ff:febb:1475  prefixlen 64  scopeid 0x20<link>
+            ether 08:00:27:bb:14:75  txqueuelen 1000  (Ethernet)
+            RX packets 16396  bytes 21573426 (21.5 MB)
+            RX errors 0  dropped 0  overruns 0  frame 0
+            TX packets 5093  bytes 444916 (444.9 KB)
+            TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+* The code starts with a line that says "eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>".
+* This means that the Ethernet interface is up and running.
+* The next line says "mtu 1500", which means the maximum transmission unit of this interface is 1500 bytes.
+* Next we see an IP address in brackets after "<IP address>" followed by a netmask (255.255.255.0) and broadcast address (10.0.2).
+* After these two lines there are three sets of four lines each with an IP address in brackets followed by a prefix length and scope ID for each set of four lines respectively: inet 10.0 prefixlen 64 scopeid 0x20 link inet6 fe80::a00:27ff:febb:1475 prefixlen 64 scopeid 0x20 link
+* The code shows that the device is connected to a network with an IP address of 10.0.2.15 and has the prefix of 64 for IPv6 addresses, which means it's on the same network as 10.0.2.16 and 10.0.2.17
+
+        lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+                inet 127.0.0.1  netmask 255.0.0.0
+                inet6 ::1  prefixlen 128  scopeid 0x10<host>
+                loop  txqueuelen 1000  (Local Loopback)
+                RX packets 58  bytes 7134 (7.1 KB)
+                RX errors 0  dropped 0  overruns 0  frame 0
+                TX packets 58  bytes 7134 (7.1 KB)
+                TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+* The code starts with the line "inet 127.0.0.1".
+* This is the IP address of the computer running this program, and it tells other computers on your network that you are using this computer as a gateway to get to other networks.
+* The next line is "netmask 255.0.0.0", which means that all computers on your network can use any number from 0-255 for their IP addresses, so long as they are within the same subnet (i.e., if one computer has an IP address of 192 and another has an IP address of 128, then both would be in the same subnet).
+* The netmask also specifies how many bits each byte can have when used in an IP address; in this case, 8 bits per byte allows for 256 possible values for each byte (2^8 = 256).
+* Next comes "inet6 ::1" which stands for IPv6 addressing notation and prefix length 128 meaning that there will be 128 consecutive zeros at the beginning of every IPv6 address before anything else is written into it - i .e., no leading zeros or dots will be present in any given IPv6 address because they're not needed!
+
+<br>
+
+# The code will remove all files in the current directory that have been previously downloaded from a Vagrantfile.
+`git rm -r --cached .vagrant`
+
+
+<br>
+
+![image info](images/linuxFileSystem.png)
+
+<br>
+<br>
+
+# Webserver Flowchart
+
+![image info](images/webserverFlowchart.png)
+
+
+<br>
+<br>
+
+# Computer to website flowchart with ports
+
+![image info](images/ports.jpg)
+
 # devops-01
 
     build a webserver
@@ -412,6 +739,7 @@ brew install virtualbox vagrant
 
 ### Test webserver
 test from shell:
+
 `curl 192.168.56.10`
 
 ### test from browser:
@@ -427,6 +755,7 @@ Deploy a website to a webserver
 
 ## Create a webpage
 
+---
 # Operating Systems:
 <br>
 
@@ -507,22 +836,28 @@ As an illustration, think of a port number as a telephone extension in a busines
 
 Dialing extension 0 to speak to an operator is extremely common in all phone systems and is like the well-known ports that always define specific services. The port is specified by having the URL or IP address followed by a colon then the port number -- as examples, 10.0.0.1:80 or www.techtarget.com:443. With all internet communication, there is always an associated port, but it may not be shown to the user as it is often implied by the type of communication.
 
-### File Transfer Protocol (FTP) -is always port number 21 
 <br>
+
+---
+
+### File Transfer Protocol (FTP) -is always port number 21 
+---
 
 ### Hypertext Transfer Protocol -web traffic is always port 80
-<br>
+---
 
 ### SSH -the default port for SSH client connections is 22; to change this default, enter a port number between 1024 and 32,767
-<br>
+---
 
 ### HTTPS -connections by default, use TCP port 443
-<br>
+---
 
 ### HTTP -the unsecure protocol, uses port 80
-<br>
+---
 
 ### mySQL -Port 3306 is the default port for the classic MySQL protocol which is used by the mysql client, MySQL Connectors, and utilities such as mysqldump and mysqlpump.
+---
+
 <br>
 
 ## Port vs IP:
